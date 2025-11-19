@@ -1,0 +1,38 @@
+<div class="bg">
+    <div class="glass-card">
+
+        <h2>Welcome Back</h2>
+
+        <form [formGroup]="form" (ngSubmit)="login()">
+
+            <mat-form-field appearance="outline">
+                <mat-label>User Type</mat-label>
+                <mat-select formControlName="userType">
+                    <mat-option value="user">Customer</mat-option>
+                    <mat-option value="admin">Admin</mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>User ID</mat-label>
+                <input matInput formControlName="userID" />
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Password</mat-label>
+                <input matInput type="password" formControlName="password" />
+            </mat-form-field>
+
+            <button mat-raised-button color="primary" class="btn" [disabled]="loading">
+                {{ loading ? 'Logging in...' : 'Login' }}
+            </button>
+
+            <p class="signup-text">
+                Don't have an account?
+               <button type="button" (click)="signUp()">Sign up</button>
+            </p>
+
+        </form>
+
+    </div>
+</div>

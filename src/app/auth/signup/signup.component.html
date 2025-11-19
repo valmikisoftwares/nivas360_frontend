@@ -1,0 +1,43 @@
+<div class="auth-container">
+
+  <div class="auth-card">
+
+    <h2>Create Account</h2>
+
+    <form [formGroup]="signupForm" (ngSubmit)="onSignup()">
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>User ID</mat-label>
+        <input matInput formControlName="userId">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Mobile Number</mat-label>
+        <input matInput formControlName="mobile">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" formControlName="password">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Confirm Password</mat-label>
+        <input matInput type="password" formControlName="confirmPassword">
+      </mat-form-field>
+
+      <button mat-raised-button class="btn-primary" type="submit">
+        Sign Up
+      </button>
+
+    </form>
+
+    <p class="login-text">
+      Already have an account?
+      <a routerLink="/login" class="signup-link">Login</a>
+    </p>
+
+  </div>
+
+</div>
+
